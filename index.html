@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>rentre 생성 파이프라인 — r1~r4 비교 미리보기</title>
+<style>
+:root{--bg:#f4f5f8;--card:#fff;--ink:#1a1a1a;--mute:#666;--accent:#5d7cf9;--good:#16a34a;--warn:#f59e0b}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);
+ font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Pretendard',sans-serif;
+ line-height:1.6;padding:32px 16px}
+.wrap{max-width:880px;margin:0 auto}
+h1{font-size:22px;margin:0 0 8px} .sub{color:var(--mute);font-size:14px;margin-bottom:24px}
+.grid{display:grid;gap:14px}
+.card{background:var(--card);border:1px solid #e5e7eb;border-radius:12px;padding:18px 20px;text-decoration:none;color:inherit;
+ display:block;transition:transform .08s ease,box-shadow .08s ease}
+.card:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,.06)}
+.card h2{margin:0 0 4px;font-size:16px;display:flex;align-items:center;gap:8px}
+.tag{font-size:11px;padding:2px 8px;border-radius:999px;background:#eef2ff;color:var(--accent);font-weight:600}
+.tag.good{background:#dcfce7;color:var(--good)} .tag.warn{background:#fef3c7;color:#b45309}
+.meta{color:var(--mute);font-size:13px;margin-top:6px}
+.kv{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;font-size:12px;color:#444}
+.kv span{background:#f5f7fb;padding:3px 8px;border-radius:6px}
+footer{color:var(--mute);font-size:12px;margin-top:28px;text-align:center}
+</style></head>
+<body><main class="wrap">
+<h1>rentre — 원룸 슬림 정수기 렌탈 추천 콘텐츠 생성 파이프라인</h1>
+<p class="sub">같은 프롬프트로 4회 반복 생성. 단계별 보강이 글 품질을 어떻게 바꿨는지 비교용 미리보기.</p>
+<div class="grid">
+  <a class="card" href="r4/"><h2><span class="tag good">r4 · 추천</span> 자동 style + 외부 CSS 적용</h2>
+    <div class="meta">URLStyleExtractor 자동 산출본 사용. 마커 v2 + 자사 도메인 allowlist + 게이트 A.</div>
+    <div class="kv"><span>factual 4</span><span>citation 5</span><span>fabrication clean</span><span>마커 brace 100%</span></div></a>
+  <a class="card" href="r3/"><h2><span class="tag">r3</span> 수동 style placeholder + 모든 보강</h2>
+    <div class="meta">style_profile 만 수동(rentre 1글에서 사람이 뽑음). 나머지는 r4 와 동일.</div>
+    <div class="kv"><span>factual 3</span><span>citation 4</span><span>마커 mdlink 24</span></div></a>
+  <a class="card" href="r2/"><h2><span class="tag">r2</span> 마커 v2 + allowlist 도입 (게이트 A 전)</h2>
+    <div class="meta">자사 인라인 anchor 링크 첫 도입. 표 순위 모순 등 발견.</div>
+    <div class="kv"><span>factual 3</span><span>citation 4</span></div></a>
+  <a class="card" href="r1/"><h2><span class="tag warn">r1</span> 최초 — 각주 인용, 사후 패치</h2>
+    <div class="meta">자사 인용을 [n] 각주로. 경쟁사 인용 발견 → 사후 차단.</div>
+    <div class="kv"><span>factual 4</span><span>citation 5</span><span>(QA pass)</span></div></a>
+</div>
+<footer>생성 파이프라인 sea-127 + URLStyleExtractor sea-128 — rentre 슬림 정수기 렌탈 프롬프트 1회전 × 4 버전</footer>
+</main></body></html>
